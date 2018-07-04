@@ -30,9 +30,6 @@ public class DaoImpl<T> implements Dao<T> {
         }
         */
 
-
-
-
         System.out.println(clazz.getSimpleName());
     }
 
