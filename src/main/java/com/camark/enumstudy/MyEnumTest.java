@@ -14,5 +14,6 @@ public class MyEnumTest {
 
         me = MyEnum.valueOf("RED");
         System.out.println(me.name());
+
     }
 }

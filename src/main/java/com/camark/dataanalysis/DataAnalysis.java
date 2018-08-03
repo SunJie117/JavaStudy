@@ -33,7 +33,7 @@ public class DataAnalysis {
 
     public static Double[] multiple2probability(double... multiples) {
         Double[] probabilitys = new Double[multiples.length];
-        double[] probabilityMultiples = new double[multiples.length];
+        Double[] probabilityMultiples = new Double[multiples.length];
 
         double probabilityMultipleSum = 0;
 
@@ -46,7 +46,8 @@ public class DataAnalysis {
             probabilitys[i] = probabilityMultiples[i] / probabilityMultipleSum;
         }
 
-        return probabilitys;
+        return probabilityMultiples;
+        //return probabilitys;
     }
 
     public static void analysisData() {
@@ -100,29 +101,29 @@ public class DataAnalysis {
                         case WINS:
                             if (rate == 1) {
                                 homeWinsAddList.add(winLossesDatas[0] + winLossesDatas[1] - rateDatas[0]);
-                                homeWinsAddStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[2] - rateDatas[1] - rateDatas[2]));
+                                homeWinsAddStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] + winLossesDatas[1] + winLossesDatas[2]));
                             } else if (rate == -1) {
                                 homeWinsSubList.add(winLossesDatas[1] + winLossesDatas[2] - rateDatas[2]);
-                                homeWinsSubStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] - rateDatas[0] - rateDatas[1]));
+                                homeWinsSubStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] + winLossesDatas[1] + winLossesDatas[2]));
                             }
                             break;
                         case DRAWS:
                             if (rate == 1) {
                                 homeDrawsAddList.add(winLossesDatas[0] + winLossesDatas[1] - rateDatas[0]);
-                                homeDrawsAddStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[2] - rateDatas[1] - rateDatas[2]));
+                                homeDrawsAddStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] + winLossesDatas[1] + winLossesDatas[2]));
                             } else  if (rate == -1) {
                                 homeDrawsSubList.add(winLossesDatas[1] + winLossesDatas[2] - rateDatas[2]);
-                                homeDrawsSubStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] - rateDatas[0] - rateDatas[1]));
+                                homeDrawsSubStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] + winLossesDatas[1] + winLossesDatas[2]));
                             }
                             break;
 
                         case LOSSES:
                             if (rate == 1) {
                                 homeLossesAddList.add(winLossesDatas[0] + winLossesDatas[1] - rateDatas[0]);
-                                homeLossesAddStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[2] - rateDatas[1] - rateDatas[2]));
+                                homeLossesAddStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] + winLossesDatas[1] + winLossesDatas[2]));
                             } else  if (rate == -1) {
                                 homeLossesSubList.add(winLossesDatas[1] + winLossesDatas[2] - rateDatas[2]);
-                                homeLossesSubStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] - rateDatas[0] - rateDatas[1]));
+                                homeLossesSubStrList.add(dataStrLine + String.format("   %.3f",winLossesDatas[0] + winLossesDatas[1] + winLossesDatas[2]));
                             }
                             break;
 
